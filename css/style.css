@@ -1,4 +1,61 @@
  /* Ini CSS External */
+
 body {
+        font-family: karla;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+
+}
+
+.main-header>h1 {
+    margin: 0px;
+    padding: 25px;
+    background-color: lightsteelblue;
+    text-align: center;
+    font-family: monospace;
+}
+
+main {
+    background-color:cadetblue;
+    padding: 19px;
+    text-align: center; 
+
+}
+
+.nav-fitur {
+    display: flex;
+    flex-direction: column
+
+}
+
+.nav-fitur>a {
+    color: white;
+    padding-top: 19px;
+    padding-bottom: 15px;
+    width: 50%;
+    align-self: center;
+
+}
+
+.nav-fitur-non-active {
+    background-color: red;
+
+}
+
+.nav-fitur>a {
+    color: white;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    width: 50%;
+    align-self: center;
+}
+
+nav.nav-fitur-non-active {
+    background-color: red;
+}
+
+.nav-fitur-activce {
+    color: white;
     
 }
