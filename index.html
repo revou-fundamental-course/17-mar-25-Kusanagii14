@@ -11,26 +11,23 @@
      <!-- Font style-->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
      <!-- Icon -->
      <link rel="icon" href="assets/icon.ico">
 </head>
 
 <body>
+  <!-- Container -->
+   <div class="container">
+
 <!-- Header -->
 <header class="main-header">
-    <h1>Katik (Kalkulator Matematik)</h1>
+    <h1>Kalkulator Matematik</h1>
 </header>
 
 <!-- Main Content -->
  <main>
-    <!-- Welcome Speech -->
-     <header>
-        <h1>Welcome to Katik</h1>
-     </header>
-     <p>Hai sobat selamat datang di katik!</p>
-     <p>Website sederhana ini siap membantu kamu dalam menghitung nilai luas dan keliling bangun datar</p>
 
      <!-- Navigasi Fitur -->
       <div class="nav-fitur">
@@ -46,9 +43,16 @@
 
         <!-- Gambar Luas -->
          <div class="section-image"></div>
+         <p>Rumus Luas Persegi:</p>
+         <p>Luas = Sisi x Sisi</p>
 
          <!-- Konten Perhitungan -->
-          <div class="calculate-content"></div>
+          <div id="squareForm">
+            <input type="number" id="side" placeholder="Masukan panjang sisi">
+            <button onclick="calculate('area')">Hitung Luas</button>
+            <h3 id="result"></h3>
+          </div>
+
      </section>
 
      <!-- Section Keliling -->
@@ -60,11 +64,20 @@
     <!-- Gambar Keliling -->
      <section>
         <div class="section-image"></div>
+        <p>Rumus keliling</p>
 
      <!-- Konten Perhitungan -->
-      <div class="calculate-content"></div>
+      <div id="squareForm">
+        <input type="number" id="side" placeholder="Masukan panjang sisi">
+      </div>
      </section>
- </main>
+
+        <button onclick="calculate('perimeter')">Hitung Keliling</button>
+        <h3 id="result"></h3>
+
+    </div>
+
+  </main>
 
  <!-- Footer -->
   <footer>

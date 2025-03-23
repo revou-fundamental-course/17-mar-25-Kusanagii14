@@ -1,27 +1,41 @@
  /* Ini CSS External */
 
 body {
-        font-family: karla;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
+    font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #3b82f6, #93c5fd);
+            text-align: center;
+            padding: 50px;
 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    margin: auto;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+    transition: 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.02)
 }
 
 .main-header>h1 {
-    margin: 0px;
-    padding: 25px;
-    background-color: lightsteelblue;
-    text-align: center;
-    font-family: monospace;
+    color: #1e3a8a;
+    font-size: 26px;
+    position: relative;
+    
 }
 
-main {
-    background-color:cadetblue;
-    padding: 19px;
-    text-align: center; 
-
-}
 
 .nav-fitur {
     display: flex;
@@ -30,32 +44,65 @@ main {
 }
 
 .nav-fitur>a {
-    color: white;
-    padding-top: 19px;
-    padding-bottom: 15px;
-    width: 50%;
-    align-self: center;
-
-}
-
-.nav-fitur-non-active {
-    background-color: red;
-
-}
-
-.nav-fitur>a {
-    color: white;
+    color:rgb(30, 111, 193);
     padding-top: 19px;
     padding-bottom: 19px;
     width: 50%;
     align-self: center;
 }
 
-nav.nav-fitur-non-active {
+.nav-fitur-non-active {
     background-color: red;
 }
 
 .nav-fitur-activce {
-    color: white;
+    background-color: rgb(30, 111, 193);
     
+}
+
+.section-header {
+    background-color:aquamarine ;
+}
+
+.section-image {
+    background-image: url(../assets/Persegi.png);
+    width: 300px;
+    height: 300px;
+    justify-self: center;
+    background-size: cover;
+    background-position: center;
+}
+
+input, select {
+    width: 90%;
+     padding: 12px;
+     margin: 10px 0; 
+      border-radius: 8px;
+     border: 2px solid #ff8c42;
+      outline: none;
+}
+
+button {
+    padding: 12px 25px;
+    background: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #c70039;
+    transform: scale(1.05);
+}
+
+section {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+footer {
+    text-align: center;
 }
