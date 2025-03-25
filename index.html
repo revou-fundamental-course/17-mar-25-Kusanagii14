@@ -1,88 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katik- Fazli</title>
+    <title>Kalkulator Luas dan Keliling</title>
+   
+   <!-- Ini CSS Eksternal -->
+    <link rel="stylesheet" href="css/style.css">
 
-     <!-- CSS Internal-->
-     <link rel="stylesheet" href="css/style.css">
+    <!-- Ini JavaScript Eksternal-->
+    <script src="../js/script.js"> </script>
 
      <!-- Font style-->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-     <!-- Icon -->
-     <link rel="icon" href="assets/icon.ico">
+      <!-- Icon -->
+      <link rel="icon" href="assets/icon.ico">
+
 </head>
 
 <body>
-  <!-- Container -->
-   <div class="container">
-
-<!-- Header -->
-<header class="main-header">
-    <h1>Kalkulator Matematik</h1>
-</header>
-
-<!-- Main Content -->
- <main>
-
-     <!-- Navigasi Fitur -->
-      <div class="nav-fitur">
-      <a href="" class=""nav-fitur-active>Persegi</a>
-      <a href="" class="nav-fitur-non-active">Persegi Panjang</a> 
-    </div>
-
-    <!-- Section Luas -->
-     <section>
-        <header class="section-header">
-            <h1>Luas Persegi</h1>
-        </header>
-
-        <!-- Gambar Luas -->
-         <div class="section-image"></div>
-         <p>Rumus Luas Persegi:</p>
-         <p>Luas = Sisi x Sisi</p>
-
-         <!-- Konten Perhitungan -->
-          <div id="squareForm">
-            <input type="number" id="side" placeholder="Masukan panjang sisi">
-            <button onclick="calculate('area')">Hitung Luas</button>
-            <h3 id="result"></h3>
-          </div>
-
-     </section>
-
-     <!-- Section Keliling -->
-    <section>
-        <header class="section-header"></header>
-         <h1>Keliling Persegi</h1>
-    </header>
-
-    <!-- Gambar Keliling -->
-     <section>
-        <div class="section-image"></div>
-        <p>Rumus keliling</p>
-
-     <!-- Konten Perhitungan -->
-      <div id="squareForm">
-        <input type="number" id="side" placeholder="Masukan panjang sisi">
-      </div>
-     </section>
-
+    <!-- Container -->
+    <div class="container">
+        <h1>Kalkulator Luas & Keliling</h1>
+        <label for="shape">Pilih Bentuk:</label>
+        <select id="shape" onchange="changeForm()">
+            <option value="square">Persegi</option>
+            <option value="rectangle">Persegi Panjang</option>
+        </select>
+        
+        <!-- Gambar Persegi -->
+        <div class="image-container">
+            <img id="shapeImage" src="../assets/Persegi.png" alt="Gambar Persegi">
+        </div>
+        
+        <!-- Input Peersgi -->
+        <div id="squareForm">
+            <label for="side">Sisi Persegi:</label>
+            <input type="number" id="side" placeholder="Masukkan panjang sisi">
+        </div>
+        
+        <!-- Input Persegi Panjang -->
+        <div id="rectangleForm" style="display: none;">
+            <label for="length">Panjang:</label>
+            <input type="number" id="length" placeholder="Masukkan panjang">
+            <label for="width">Lebar:</label>
+            <input type="number" id="width" placeholder="Masukkan lebar">
+        </div>
+        
+        <!-- Button -->
+        <button onclick="calculate('area')">Hitung Luas</button>
         <button onclick="calculate('perimeter')">Hitung Keliling</button>
         <h3 id="result"></h3>
 
     </div>
-
-  </main>
-
- <!-- Footer -->
-  <footer>
-    <p>Made by Fazli Maheswara Prathama</p>
-  </footer>
+    
 </body>
 
 </html>
