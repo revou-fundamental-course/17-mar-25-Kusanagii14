@@ -27,32 +27,24 @@ function changeForm() {
 }
 
 // Fungsi untuk menghitung luas atau keliling berdasarkan bentuk yang dipilih
-function calculate(type) {
-    let shape = document.getElementById("shape").value;
-    let result = document.getElementById("result");
+function calculateSquareArea() {
+    let side = parseFloat(document.getElementById("sideLuas").value);
+    document.getElementById("resultLuas").innerText = side > 0 ? `Luas: ${side * side}` : "Masukkan angka valid!";
+}
 
-    if (shape === "square") {
-        let side = parseFloat(document.getElementById("side").value);
-        if (!side || side <= 0) {
-            result.innerText = "Silahkan masukkan angka yang valid";
-            return;
-        }
-        if (type === "area") {
-            result.innerText = `Luas: ${side * side}`;
-        } else {
-            result.innerText = `Keliling: ${4 * side}`;
-        }
-    } else {
-        let length = parseFloat(document.getElementById("length").value);
-        let width = parseFloat(document.getElementById("width").value);
-        if (!length || !width || length <= 0 || width <= 0) {
-            result.innerText = "Silahkan masukkan panjang dan lebar yang valid";
-            return;
-        }
-        if (type === "area") {
-            result.innerText = `Luas: ${length * width}`;
-        } else {
-            result.innerText = `Keliling: ${2 * (length + width)}`;
-        }
-    }
+function calculateSquarePerimeter() {
+    let side = parseFloat(document.getElementById("sideKeliling").value);
+    document.getElementById("resultKeliling").innerText = side > 0 ? `Keliling: ${4 * side}` : "Masukkan angka valid!";
+}
+
+function calculateRectangleArea() {
+    let length = parseFloat(document.getElementById("length").value);
+    let width = parseFloat(document.getElementById("width").value);
+    document.getElementById("resultLuasRectangle").innerText = (length > 0 && width > 0) ? `Luas: ${length * width}` : "Masukkan angka valid!";
+}
+
+function calculateRectanglePerimeter() {
+    let length = parseFloat(document.getElementById("lengthPerimeter").value);
+    let width = parseFloat(document.getElementById("widthPerimeter").value);
+    document.getElementById("resultKelilingRectangle").innerText = (length > 0 && width > 0) ? `Keliling: ${2 * (length + width)}` : "Masukkan angka valid!";
 }

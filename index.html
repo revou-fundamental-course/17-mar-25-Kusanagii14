@@ -38,22 +38,39 @@
         
         <!-- Input Peersgi -->
         <div id="squareForm">
-            <label for="side">Sisi Persegi:</label>
-            <input type="number" id="side" placeholder="Masukkan panjang sisi">
+            <h3>Hitung Luas</h3>
+            <label for="sideLuas">Sisi Persegi:</label>
+            <input type="number" id="sideLuas" placeholder="Masukan panjang sisi">
+            <button onclick="calculateSquareArea()">Hitung Luas</button>
+            <div class="result-section" id="resultLuas"></div>
+            
+
+            <h3>Hitung Keliling</h3>
+            <label for="sideKeliling">Sisi Persegi:</label>
+            <input type="number" id="sideKeliling" placeholder="Masukan panjang sisi">
+            <button onclick="calculateSquarePerimeter()">Hitung Keliling</button>
+            <div class="result-section" id="resultKeliling"></div>
         </div>
         
         <!-- Input Persegi Panjang -->
         <div id="rectangleForm" style="display: none;">
+            <h3>Hitung Luas</h3>
             <label for="length">Panjang:</label>
             <input type="number" id="length" placeholder="Masukkan panjang">
             <label for="width">Lebar:</label>
             <input type="number" id="width" placeholder="Masukkan lebar">
+            <button onclick="calculateRectangleArea()">Hitung Luas</button>
+            <div class="result-section" id="resultLuasRectangle"></div>
+            
+            
+            <h3>Hitung Keliling</h3>
+            <label for="lengthPerimeter">Panjang:</label>
+            <input type="number" id="lengthPerimeter" placeholder="Masukkan panjang">
+            <label for="widthPerimeter">Lebar:</label>
+            <input type="number" id="widthPerimeter" placeholder="Masukkan lebar">
+            <button onclick="calculateRectanglePerimeter()">Hitung Keliling</button>
+            <div class="result-section" id="resultKelilingRectangle"></div>
         </div>
-        
-        <!-- Button -->
-        <button onclick="calculate('area')">Hitung Luas</button>
-        <button onclick="calculate('perimeter')">Hitung Keliling</button>
-        <h3 id="result"></h3>
 
     </div>
     
