@@ -17,7 +17,7 @@ function changeForm() {
          // Jika bentuk yang dipilih adalah persegi panjang
         document.getElementById("squareForm").style.display = "none";
         document.getElementById("rectangleForm").style.display = "block";
-        shapeImage.src = "assets/Persegi Panjang.png";
+        shapeImage.src = "assets/Persegi-Panjang.png";
         shapeImage.alt = "Gambar Persegi Panjang";
         shapeImage.style.width = "400px";
         shapeImage.style.height = "auto";
