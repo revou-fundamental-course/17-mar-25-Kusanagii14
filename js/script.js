@@ -9,7 +9,7 @@ function changeForm() {
     if (shape === "square") {
         document.getElementById("squareForm").style.display = "block";
         document.getElementById("rectangleForm").style.display = "none";
-        shapeImage.src = "../assets/Persegi.png";
+        shapeImage.src = "assets/Persegi.png";
         shapeImage.alt = "Gambar Persegi";
         shapeImage.style.width = "200px";
         shapeImage.style.height = "auto";
@@ -17,7 +17,7 @@ function changeForm() {
          // Jika bentuk yang dipilih adalah persegi panjang
         document.getElementById("squareForm").style.display = "none";
         document.getElementById("rectangleForm").style.display = "block";
-        shapeImage.src = "../assets/Persegi Panjang.png";
+        shapeImage.src = "assets/Persegi Panjang.png";
         shapeImage.alt = "Gambar Persegi Panjang";
         shapeImage.style.width = "400px";
         shapeImage.style.height = "auto";
